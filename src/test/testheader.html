@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin:0;}
+		.header-cel1{width: 10%;}
+		.header-cel2{width: 20%;}
+		.header-cel3{width: 30%;}
+		.header-cel4{width: 40%;}
+		.header-cel5{width: 50%;}
+		.header-cel6{width: 60%;}
+		.header-cel7{width: 70%;}
+		.header-cel8{width: 80%;}
+		.header-cel9{width: 90%;}
+		.header-cel10{width: 100%;}
+		#headerContainer{font-size: 0;position: relative;text-align: center;background: #ffffff;color: #000000;}
+		.header-center-tap{border-right: 1px solid #f0f0f0;border-left: 1px solid #f0f0f0;}
+		.header-tap{
+			box-sizing: border-box!important;border-top: 1px solid #f0f0f0;border-bottom: 1px solid #f0f0f0;
+			display: inline-block!important;height:3rem;line-height: 3rem;font-size: 1rem;
+		}
+		.header-tap-title{font-weight: bold;}
+		.header-tap-state{font-size: 0.6rem;display: inline-block;vertical-align:top;}
+		.header-tap-open{transform: rotate(180deg);}
+		.none{display: none;}
+		.header-list{position: absolute!important;top:3rem;z-index:999;left: 0;width: 100%;font-size: 1rem;}
+		.header-list li{padding: 0.8rem;border-bottom: 1px solid #f0f0f0;}
+		.header-list-active:before{
+			position:absolute;
+			left:1rem;
+			content:'√';
+		}
+	</style>
+</head>
+<body>
+	<div id="headerContainer">
+		<div class="header-tap header-cel2">
+			<span class="header-tap-title">星期</span>
+			<span class="header-tap-state">∨</span>
+		</div>
+		<div class="header-tap header-cel6 header-center-tap">
+			<span class="header-tap-title">门店</span>
+			<span class="header-tap-state header-tap-open">∨</span>
+		</div>
+		<div class="header-tap header-cel2">
+			<span class="header-tap-title">时间</span>
+			<span class="header-tap-state header-tap-open">∨</span>
+		</div>
+		<ul class="header-list none">
+			<li data-index="0" class="header-list-active">周一</li>
+			<li data-index="1">周二</li>
+			<li data-index="2">周三</li>
+			<li data-index="3">周四</li>
+			<li data-index="4">周五</li>
+			<li data-index="5">周六</li>
+			<li data-index="6">周日</li>
+		</ul>
+	</div>
+</body>
+</html>
