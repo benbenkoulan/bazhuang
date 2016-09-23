@@ -4,7 +4,7 @@
 	</ul>
 </template>
 <style>
-.header-list{position: absolute!important;top:3rem;z-index:999;left: 0;width: 100%;font-size: 1rem;}
+.header-list{position: absolute!important;top:3rem;z-index:999;left: 0;width: 100%;font-size: 1rem;background: #ffffff;}
 .header-list li{padding: 0.8rem;border-bottom: 1px solid #f0f0f0;}
 .header-list-active:before{
 	position:absolute;

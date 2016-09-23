@@ -1,0 +1,11 @@
+{
+	"profitValue":30000,
+	"profitPercent":20,
+	"profitType":2,//1代表增长，2代表减少
+	"customer":800,
+	"food":180,
+	"table":200,
+	"waiter":"楚云飞",
+	"waiterNum":"200000",
+	"riskState":"正常"
+}

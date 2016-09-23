@@ -50,6 +50,7 @@ export default {
 			if(this.prop['id'] == args[2]){
 				this.prop['value'] = args[0];
 				this.prop['title'] = args[1];
+				this.$dispatch('request');
 			}
 		}
 	},

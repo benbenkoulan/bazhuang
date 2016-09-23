@@ -15,9 +15,9 @@ export default {
 	data(){
 		return {
 			taps:[
-				{prop:{id:'week',title:'星期'},classes:'header-cel2'},
-				{prop:{id:'store',title:'门店'},classes:'header-cel6 header-center-tap'},
-				{prop:{id:'date',title:'日期'},classes:'header-cel2'}
+				{prop:{id:'week',title:'周一',value:0},classes:'header-cel2'},
+				{prop:{id:'store',title:'河南',value:0},classes:'header-cel6 header-center-tap'},
+				{prop:{id:'date',title:'日',value:0},classes:'header-cel2'}
 			],
 			lists:[
 				{id:'week',activeIndex:0,items:[{name:'周一',value:'1'},
@@ -36,7 +36,7 @@ export default {
 				{id:'date',activeIndex:0,items:[{name:'日',value:'1'},
 				{name:'周',value:'2'},
 				{name:'月',value:'3'},
-				{name:'年',value:'4'}]},
+				{name:'年',value:'4'}]}
 			]
 		}
 	},
@@ -48,8 +48,20 @@ export default {
 			if(type == 1){
 				this.$broadcast('openList',bargs);
 			} else if(type == 2){
+				this.$dispatch('getIndexData',bargs);
 				this.$broadcast('setSelected',bargs);
 			}
+		},
+		request:function(){
+			const tap0 = this.taps[0]['prop'];
+			const tap1 = this.taps[1]['prop'];
+			const tap2 = this.taps[2]['prop'];
+
+			var requestData = {};
+			requestData[tap0.id] = tap0.value,
+			requestData[tap1.id] = tap1.value,
+			requestData[tap2.id] = tap2.value;
+			this.$dispatch('render',requestData);
 		}
 	},
 	methods:{

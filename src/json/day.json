@@ -1,0 +1,11 @@
+{
+	"profitValue":1000,
+	"profitPercent":10,
+	"profitType":1,
+	"customer":80,
+	"food":80,
+	"table":100,
+	"waiter":"孙红雷",
+	"waiterNum":"10000",
+	"riskState":"正常"
+}
